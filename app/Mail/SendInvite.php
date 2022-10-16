@@ -46,9 +46,7 @@ class SendInvite extends Mailable
     {
         return new Content(
             markdown: 'mail.send-invite',
-            with: [
-                'url' => url('').'/register/'.$this->mailData['invite_code'],
-            ],
+           
         );
     }
 

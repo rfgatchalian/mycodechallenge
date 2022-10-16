@@ -76,6 +76,7 @@ class HomeController extends Controller
         $mailData = [
             "name" => $user->name,
             "invite_code" => Crypt::encrypt($referralInvite->id),
+            "url" => url('/register/'.Crypt::encrypt($referralInvite->id))
         ];
 
         //send invite email
